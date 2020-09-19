@@ -1,2 +1,30 @@
-# gcloudsdk-docker-wrapper
-A Bash script to execute Google Cloud SDK commands from the host machine and run them within a container
+# Google Cloud SDK - Docker wrapper
+
+A simple bash script to forward local Google Cloud SDK CLI commands to the Google Cloud SDK Docker image, allowing to run commands locally without any need to install CLI tools on the host machine.
+
+## Requirements
+
+* Docker
+
+## Getting started
+
+Source the bash file. Optionally, add the source command to your *~/.bash_profile* to source it automatically when the shell starts.
+
+```shell
+source gcloud-sdk-profile.sh
+```
+
+Run a Google Cloud SDK command. It will be automatically executed in a dedicated Docker container
+The container will be terminated as soon as the command finishes.
+
+## Supported Commands
+
+* gcloud
+
+* gsutils
+
+* bq
+
+## Persistency and volumes
+
+Your local *~/.config/gcloud* folder is automatically mounted in the container under */root/.config/gcloud*. This way your settings are saved on the host machine, although the applications are executed in the containers.

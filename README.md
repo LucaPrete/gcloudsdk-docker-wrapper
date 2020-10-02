@@ -11,10 +11,12 @@ A simple bash script to forward local Google Cloud SDK CLI commands to the Googl
 Source the bash file. Optionally, add the source command to your *~/.bash_profile* to source it automatically when the shell starts.
 
 ```shell
-source gcloud-sdk-profile.sh
+source gcloud-sdk-profile.sh [container-version]
 ```
 
-Run a Google Cloud SDK command. It will be automatically executed in a dedicated Docker container
+>Note: optionally, specify a container version as the first param
+
+Now, run a Google Cloud SDK command. It will be automatically executed in a dedicated Docker container.
 The container will be terminated as soon as the command finishes.
 
 ## Supported Commands

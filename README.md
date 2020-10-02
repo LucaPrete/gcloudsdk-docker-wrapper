@@ -27,6 +27,11 @@ The container will be terminated as soon as the command finishes.
 
 * bq
 
+## Commands shortcuts
+
+Some commands may be long and difficult to remember. [ludoo](https://github.com/ludoo) provided a list of nice shortcuts as well!
+The full list can be checked out directly [here](gcloud-sdk-profile.sh).
+
 ## Persistency and volumes
 
 Your local *~/.config/gcloud* folder is automatically mounted in the container under */root/.config/gcloud*. This way your settings are saved on the host machine, although the applications are executed in the containers.
